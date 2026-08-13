@@ -2,22 +2,21 @@
     "menu": {
         "item2": "About me",
         "item3": "Skills",
-        "item4": "Training",
+        "item4": "Education",
         "item5": "Projects",
         "item6": "Contact"
     },
 
     "home": {
-        "home_text-1": "Hi! I'm",
-        "home_text-3": "Front-End Web Developer",
-        "parrafo-info": "Statistics and programming student focused on Frontend Web Development. As a person who loves intuitive and aesthetically pleasing designs I seek to create projects that provide the best user experience.",
+        "home_text-3": "Junior Software Developer",
+        "parrafo-info": "Passionate about technology, problem-solving, and continuous learning. I am interested in creating functional solutions, learning new technologies, and turning ideas into real projects.",
         "cv_button": "Download CV",
         "contact_button": "Contact"
     },
 
     "sobre-mi": {
         "title": "About me",
-        "texto_sobreMi": "I'm a Statistics undergraduate student and a self-taught Web Development student focused on Frontend programming.<br>I aspire to get a job in the Web Development world, gain experience, new knowledge and strengthen my professional life.<br><br>I'm an empathetic and enthusiastic person, with skills focused on teamwork, assertive communication, problem solving, responsible and proactive, I like to learn from others and continuously improve myself."
+        "texto_sobreMi": "Junior Software Developer passionate about technology and modern web development. I have knowledge of HTML, CSS, JavaScript, Java, .NET, and SQL Server databases, which allows me to develop functional and attractive solutions.<br>I am interested in continuing to grow professionally in the frontend and backend development field by creating dynamic and responsive digital applications. I consider myself a responsible and creative person with a strong capacity for continuous learning, allowing me to adapt to new technologies and professional challenges.<br>"
     },
 
     "habilidades": {
@@ -25,27 +24,28 @@
     },
 
     "formacion": {
-        "title": "Training",
-        "formacion1": "Statistic",
-        "tiempo-formacion1": "2019 - In progress",
-        "formacion2": "Full-Stack Developer",
-        "tiempo-formacion2": "2022 - In progress",
-        "formacion3": "Accounting for Commercial and Financial Transactions"
+        "title": "Education",
+        "formacion1": "High School Diploma",
+        "tiempo-formacion1": "2019 - 2023",
+        "formacion2": "Software Engineering",
+        "tiempo-formacion2": "2024 - Present"
     },
 
     "proyectos": {
         "title": "Projects",
-        "title-proyecto1": "Hangman Game",
-        "info-proyecto1": "A game where the user must guess the secret word with a certain number of chances. The word is chosen randomly by the program and the user will lose the moment the gallows is completed.",
-        "title-proyecto2": "Portfolio",
-        "info-proyecto2": "My personal web portfolio, where you can find some of my most outstanding projects, my technical skills and a bit about my background.",
-        "title-proyecto3": "Text Encryptor",
-        "info-proyecto3": "An encryptor where the user can type a text and the encryptor encrypts it with pre-programmed keys. The encryptor can also decrypt the text."
+        "title-proyecto1": "Hardware Store Management System",
+        "info-proyecto1": "A system developed to manage the operations of a hardware store, applying programming, database, and software development knowledge.",
+
+        "title-proyecto2": "FincasApp",
+        "info-proyecto2": "A web application focused on property management, developed using technologies such as .NET, C#, JavaScript, and SQL Server.",
+
+        "title-proyecto3": "Web Portfolio",
+        "info-proyecto3": "My personal web portfolio, created to showcase my skills, academic projects, and experience in software development."
     },
 
     "contacto": {
         "title": "Contact",
-        "text": "Complete the form below and I will contact you as soon as possible.",
+        "text": "Complete the form below and I will get in touch with you as soon as possible.",
         "btn-enviar": "Send"
     }
 }
