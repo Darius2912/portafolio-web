@@ -310,25 +310,31 @@ span+span {
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
-    margin: 0;
     white-space: nowrap;
+    margin: 0;
 }
 
 .container_text-slogan {
-    text-align: start;
-    min-height: 2.4rem;
+    text-align: left;
+    margin-bottom: 1rem;
 }
 
 .text-type {
+    position: relative;
     display: inline-block;
-    border-right: 2px solid var(--beaver);
-    padding-right: .3rem;
+}
+
+.text-type::after {
+    content: '|';
+    font-weight: bold;
+    margin-left: 2px;
+    color: var(--beaver);
     animation: blink-caret .75s step-end infinite;
 }
 
 @keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50% { border-color: var(--beaver); }
+    from, to { opacity: 1; }
+    50% { opacity: 0; }
 }
 
 .text-type::after {
