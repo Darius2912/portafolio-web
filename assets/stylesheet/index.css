@@ -333,7 +333,7 @@ span+span {
 
 @keyframes typing {
     from { width: 0; }
-    to   { width: calc(var(--char-count, 30) * 1.05ch); }
+    to   { width: var(--final-width, 100%); }
 }
 
 @keyframes blink-caret {
