@@ -318,27 +318,25 @@ span+span {
 .text-type {
     position: relative;
     display: inline-block;
-    overflow: hidden;
-    white-space: nowrap;
-    vertical-align: bottom;
-    width: 0;
-    border-right: 2px solid var(--beaver);
 }
 
-.text-type.typing-active {
-    animation:
-        typing 3.5s steps(var(--char-count, 30), end) forwards,
-        blink-caret .75s step-end infinite;
+.text-type::after {
+    content: '|';
+    font-weight: bold;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    color: var(--beaver);
+    background-color: var(--jet);
+    animation: typing 3s steps(var(--char-count, 26), end) forwards;
 }
 
 @keyframes typing {
-    from { width: 0; }
-    to   { width: var(--final-width, 100%); }
-}
-
-@keyframes blink-caret {
-    from, to { border-color: transparent; }
-    50%      { border-color: var(--beaver); }
+    to {
+        width: 0%;
+    }
 }
 
 .container_parrafo-info {
