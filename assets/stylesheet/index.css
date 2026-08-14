@@ -1,4 +1,4 @@
-puedes dejarme el css completamente funcional, @font-face {
+ @font-face {
     font-family: 'Cooper Hewitt';
     src: url('../fonts/CooperHewitt-Light.woff') format('woff'),
     url('../fonts/CooperHewitt-Thin.woff') format('woff');
