@@ -34,22 +34,36 @@ btn.addEventListener('click', function() {
     }
 });
 
+/*===== Efecto de tecleo (typing) =====*/
+function initTypingEffect(el) {
+    const text = el.textContent.trim();
+    el.style.setProperty('--char-count', text.length);
+    el.classList.remove('typing-active');
+    void el.offsetWidth; // fuerza un reflow para reiniciar la animación
+    el.classList.add('typing-active');
+}
+
 /*===== Cambio de idioma =====*/
 const changeLanguage = async language => {
     const requestJson = await fetch(`./languages/${language}.json`);
     const texts = await requestJson.json();
-
     for(const textToChange of textsToChange) {
         const section = textToChange.dataset.section;
         const value = textToChange.dataset.value;
-
         textToChange.innerHTML = texts[section][value];
+
+        // Si el elemento tiene el efecto de tecleo, lo reiniciamos con el nuevo texto
+        if (textToChange.classList.contains('text-type')) {
+            initTypingEffect(textToChange);
+        }
     }
 }
-
 flagsElement.addEventListener('click', (e) => {
     changeLanguage(e.target.parentElement.dataset.language);
 })
+
+/*===== Iniciar efecto de tecleo al cargar la página =====*/
+document.querySelectorAll('.text-type').forEach(el => initTypingEffect(el));
 
 /*===== class active por secciones =====*/
 window.addEventListener('scroll', () => {
@@ -58,7 +72,6 @@ window.addEventListener('scroll', () => {
         const sectionHeight = current.offsetHeight;
         const sectionTop = current.offsetTop - 100;
         const sectionId = current.getAttribute('id');
-
         if (scrollY > sectionTop && scrollY < sectionTop + sectionHeight) {
             document.querySelector('nav a[href*=' + sectionId + ']').classList.add('active');
         }
@@ -77,7 +90,6 @@ window.onscroll = function() {
         document.querySelector('.go-top-container').classList.remove('show');
     }
 }
-
 document.querySelector('.go-top-container').addEventListener('click', () => {
     window.scrollTo({
         top: 0,
