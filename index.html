@@ -360,58 +360,65 @@
             </div>
 
             <form
-                id="form"
-                class="form-contact"
-                name="contacto-portafolio"
-                method="POST"
-                data-netlify="true"
-            >
+    id="form"
+    class="form-contact"
+    action="https://formsubmit.co/jl5686160@gmail.com"
+    method="POST"
+>
 
-                <input
-                    id="nombre"
-                    type="text"
-                    name="name"
-                    placeholder="Nombre | Name"
-                    required
-                >
+    <!-- Configuración de FormSubmit -->
+    <input type="hidden" name="_subject" value="Nuevo mensaje desde mi portafolio">
+    <input type="hidden" name="_captcha" value="false">
+    <input type="hidden" name="_template" value="table">
 
-                <input
-                    id="email"
-                    type="email"
-                    name="email"
-                    placeholder="E-mail"
-                    required
-                >
+    <!-- Después de enviar -->
+    <input type="hidden" name="_next" value="https://darius2912.github.io/portafolio-web/#contacto">
 
-                <input
-                    id="asunto"
-                    type="text"
-                    name="affair"
-                    placeholder="Asunto | Subject"
-                    required
-                >
+    <input
+        id="nombre"
+        type="text"
+        name="name"
+        placeholder="Nombre | Name"
+        required
+    >
 
-                <textarea
-                    id="mensaje"
-                    cols="20"
-                    rows="4"
-                    name="message"
-                    placeholder="Mensaje | Message"
-                    required
-                ></textarea>
+    <input
+        id="email"
+        type="email"
+        name="email"
+        placeholder="E-mail"
+        required
+    >
 
-                <div class="btn_form--contacto">
-                    <button
-                        id="btn-enviar"
-                        type="submit"
-                        data-section="contacto"
-                        data-value="btn-enviar"
-                    >
-                        Enviar
-                    </button>
-                </div>
+    <input
+        id="asunto"
+        type="text"
+        name="affair"
+        placeholder="Asunto | Subject"
+        required
+    >
 
-            </form>
+    <textarea
+        id="mensaje"
+        cols="20"
+        rows="4"
+        name="message"
+        placeholder="Mensaje | Message"
+        required
+    ></textarea>
+
+    <div class="btn_form--contacto">
+        <button
+            id="btn-enviar"
+            type="submit"
+            data-section="contacto"
+            data-value="btn-enviar"
+        >
+            Enviar
+        </button>
+    </div>
+
+</form>
 
         </div>
     </div>
