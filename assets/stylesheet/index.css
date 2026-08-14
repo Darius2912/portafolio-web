@@ -317,6 +317,11 @@ span+span {
     white-space: nowrap;
 }
 
+.container_text-slogan {
+    display: flex;
+    justify-content: flex-start;
+}
+
 .text-type {
     position: relative;
     display: inline-block;
@@ -332,7 +337,7 @@ span+span {
     width: 100%;
     color: var(--beaver);
     background-color: var(--jet);
-    animation: typing 3s steps(var(--char-count, 26), end) forwards;
+    animation: typing 4s steps(var(--char-count, 26), end) infinite alternate;
 }
 
 @keyframes typing {
