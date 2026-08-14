@@ -310,9 +310,11 @@ span+span {
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
-    width: 28rem;
+    width: max-content;
+    max-width: 90vw;
     margin: 0 auto;
     text-align: start;
+    white-space: nowrap;
 }
 
 .text-type {
