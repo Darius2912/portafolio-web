@@ -36,18 +36,10 @@ btn.addEventListener('click', function() {
 
 /*===== Efecto de tecleo (typing) =====*/
 function initTypingEffect(el) {
-    // Quitamos la animación y el límite de ancho para medir el texto completo
-    el.classList.remove('typing-active');
-    el.style.width = 'auto';
-
     const text = el.textContent.trim();
-    const fullWidth = el.scrollWidth; // ancho real en píxeles, ya con letter-spacing y mayúsculas incluidos
-
     el.style.setProperty('--char-count', text.length);
-    el.style.setProperty('--final-width', fullWidth + 'px');
-
-    el.style.width = '0px'; // reset antes de animar
-    void el.offsetWidth;    // fuerza reflow para reiniciar la animación
+    el.classList.remove('typing-active');
+    void el.offsetWidth; // fuerza reflow para reiniciar la animación
     el.classList.add('typing-active');
 }
 
