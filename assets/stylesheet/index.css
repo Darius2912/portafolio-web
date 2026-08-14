@@ -310,21 +310,25 @@ span+span {
     font-size: 1.4rem;
     text-transform: uppercase;
     letter-spacing: .2rem;
-    width: max-content;
-    max-width: 90vw;
-    margin: 0 auto;
-    text-align: start;
+    margin: 0;
     white-space: nowrap;
 }
 
 .container_text-slogan {
-    display: flex;
-    justify-content: flex-start;
+    text-align: start;
+    min-height: 2.4rem;
 }
 
 .text-type {
-    position: relative;
     display: inline-block;
+    border-right: 2px solid var(--beaver);
+    padding-right: .3rem;
+    animation: blink-caret .75s step-end infinite;
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: var(--beaver); }
 }
 
 .text-type::after {
