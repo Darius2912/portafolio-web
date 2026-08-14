@@ -317,23 +317,28 @@ span+span {
 
 .text-type {
     position: relative;
+    display: inline-block;
+    overflow: hidden;
+    white-space: nowrap;
+    vertical-align: bottom;
+    width: 0;
+    border-right: 2px solid var(--beaver);
 }
 
-.text-type::after {
-    content: '|';
-    font-weight: bold;
-    position: absolute;
-    right: 0;
-    color: var(--beaver);
-    background-color: var(--jet);
-    width: 100%;
-    animation: typing 4s steps(28) alternate infinite;
+.text-type.typing-active {
+    animation:
+        typing 3.5s steps(var(--char-count, 30), end) forwards,
+        blink-caret .75s step-end infinite;
 }
 
 @keyframes typing {
-    to{
-        width: 0%;
-    }
+    from { width: 0; }
+    to   { width: calc(var(--char-count, 30) * 1.05ch); }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50%      { border-color: var(--beaver); }
 }
 
 .container_parrafo-info {
