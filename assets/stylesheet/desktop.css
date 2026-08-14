@@ -101,8 +101,9 @@ div.btn {
 .home_text-3 {
     margin: 0 0 2rem 0;
     font-size: 1.8rem;
-    width: 35rem;
     letter-spacing: .2rem;
+    width: max-content;
+    white-space: nowrap;
 }
 
 .container_parrafo-info {
@@ -223,7 +224,7 @@ div.btn {
     display: inline;
     position: absolute;
     width: 6rem;
-    margin: 15rem 0 0 /* 41rem */ 20%;
+    margin: 15rem 0 0 20%;
     background-attachment: fixed;
 }
 
@@ -282,7 +283,7 @@ div.btn {
     display: inline;
     position: absolute;
     width: 6rem;
-    margin: 20rem 0 0  1%;
+    margin: 20rem 0 0 1%;
     background-attachment: fixed;
 }
 
