@@ -35,12 +35,52 @@ btn.addEventListener('click', function() {
 });
 
 /*===== Efecto de tecleo (typing) =====*/
+let typingTimeoutId = null;
+
+function stopTyping() {
+    if (typingTimeoutId) {
+        clearTimeout(typingTimeoutId);
+        typingTimeoutId = null;
+    }
+}
+
+function typeWriterLoop(el, fullText, {
+    typingSpeed = 80,
+    deletingSpeed = 40,
+    pauseAfterTyping = 1500,
+    pauseAfterDeleting = 400
+} = {}) {
+    stopTyping();
+    let charIndex = 0;
+    let isDeleting = false;
+
+    function tick() {
+        if (!isDeleting) {
+            charIndex++;
+            el.textContent = fullText.slice(0, charIndex);
+            if (charIndex === fullText.length) {
+                isDeleting = true;
+                typingTimeoutId = setTimeout(tick, pauseAfterTyping);
+                return;
+            }
+            typingTimeoutId = setTimeout(tick, typingSpeed);
+        } else {
+            charIndex--;
+            el.textContent = fullText.slice(0, charIndex);
+            if (charIndex === 0) {
+                isDeleting = false;
+                typingTimeoutId = setTimeout(tick, pauseAfterDeleting);
+                return;
+            }
+            typingTimeoutId = setTimeout(tick, deletingSpeed);
+        }
+    }
+    tick();
+}
+
 function initTypingEffect(el) {
-    const text = el.textContent.trim();
-    el.style.setProperty('--char-count', text.length);
-    el.classList.remove('typing-active');
-    void el.offsetWidth; // fuerza reflow para reiniciar la animación
-    el.classList.add('typing-active');
+    const fullText = el.textContent.trim();
+    typeWriterLoop(el, fullText);
 }
 
 /*===== Cambio de idioma =====*/
